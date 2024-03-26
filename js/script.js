@@ -25,7 +25,16 @@ toggleButton.addEventListener("click", function() {
 // Question 3
 // Try change event first
 // There is another event which fires for every character. This is what we want to use.
+var firstNameInput = document.getElementById('first_name');
+var lastNameInput = document.getElementById('last_name');
 
+firstNameInput.addEventListener('input', function() {
+  if (firstNameInput.value.toLowerCase() === 'john') {
+    lastNameInput.value = 'Doe';
+  } else {
+    lastNameInput.value = '';
+  }
+});
 
 
 // Question 4
